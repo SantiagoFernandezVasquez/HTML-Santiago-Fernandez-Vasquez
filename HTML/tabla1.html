@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla</title>
+<style>
+  body {
+    background-color: #d1fffe; 
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tbody td {
+    background-color: white;
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+        <th>Id</th>
+        <th>Index</th>
+        <th>Guid</th>
+        <th>isActive</th>
+        <th>Balance</th>
+        <th>Picture</th>
+        <th>Age</th>
+        <th>EyeColor</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Company</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>About</th>
+        <th>Registered</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Tags</th>
+        <th>Friends</th>
+        <th>Greetings</th>
+        <th>Favorite Fruit</th>
+    </tr>
+  </thead>
+  <tbody id="tablaBody">
+
+  </tbody>
+</table>
+
+<script>
+fetch('tabla.json')
+  .then(response => response.json())
+  .then(data => {
+    const tablaBody = document.getElementById('tablaBody');
+    const keys = Object.keys(data[0]);
+
+    data.forEach(item => {
+      const fila = document.createElement('tr');
+      keys.forEach(key => {
+        const celda = document.createElement('td');
+        if (key === 'friends') {
+          // Crear una subtabla para la lista de amigos
+          const subtabla = document.createElement('table');
+          subtabla.style.borderCollapse = 'collapse';
+
+          const amigos = item[key];
+          amigos.forEach(amigo => {
+            const subfila = document.createElement('tr');
+            const amigoNombre = document.createElement('td');
+            amigoNombre.textContent = amigo.name; //
+            subfila.appendChild(amigoNombre);
+            subtabla.appendChild(subfila);
+          });
+
+          celda.appendChild(subtabla);
+        } else {
+          celda.textContent = item[key];
+        }
+        fila.appendChild(celda);
+      });
+      tablaBody.appendChild(fila);
+    });
+  })
+  .catch(error => console.error('Error al cargar el archivo JSON:', error));
+</script>
+
+</body>
+</html>
