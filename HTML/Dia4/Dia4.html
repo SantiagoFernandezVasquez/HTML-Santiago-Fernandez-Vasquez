@@ -5,52 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Call Of Duty</title>
   <link rel="icon" href="images.png" type="image/x-icon">
-  <style>
-    body {
-      background-color: #000000;
-    }
-
-    .image-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .Img1, .Img2 {
-      width: 48%;
-      margin: 0 1%;
-    }
-
-    .image-container img {
-      height: auto;
-      max-width: 100%;
-      object-fit: cover;
-    }
-
-    /* Optional styling for videos */
-    .Vid1, .Vid2 {
-      width: 100%; /* Adjust as needed */
-      margin-top: 20px; /* Add spacing if videos are below images */
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="image-container">
-    <div class="Img1">
-      <img src="COD_CS_ONI-1.jpg" alt="">
-    </div>
+  <div class="container">
+    <div class="image-container">
+      <div class="main-image-container">
+        <div class="Img1">
+          <img src="COD_CS_ONI-1.jpg" width="630" height="100%" alt="">
+        </div>
+        <div class="video-container">
+          <div class="Vid1">
+            <video autoplay muted loop width="560" height="300">
+                <source src="Grabación 2024-04-09 133624.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="Vid2">
+            <video autoplay muted loop width="560" height="300">
+                <source src="koto_CoD_objects_coin_R2_D1_V2_HD_DOWNLOAD.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
     <div class="Img2">
-      <img src="COD_CS_ABOLISHER_2.jpg" alt="">
+      <img src="COD_CS_ABOLISHER_2.jpg" width="560" height="315" alt="">
     </div>
-  </div>
-
-  <div class="Vid1">
-    <video src="Grabación 2024-04-09 133624.mp4" type="video/mp4" loop controls></video>
-  </div>
-  <div class="Vid2">
-    <video src="Grabación 2024-04-09 134135 - Trim.mp4" type="video/mp4" loop controls></video>
+    <div class="Vid3">
+        <video autoplay muted loop width="560" height="315">
+            <source src="koto_CoD_caseStudy_hoodie_final_HD_DOWNLOAD.mp4" type="video/mp4">
+        </video>
+    </div>
+    </div>
   </div>
 </body>
 </html>
