@@ -2,43 +2,76 @@ body {
     background-color: rgb(246, 0, 0);
 }
 .container {
-    background-color: #000000;
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-auto-rows: 1fr; 
-    grid-template-columns: 1.4fr 0.1fr 1.5fr; 
-    grid-template-rows: 1.1fr 1.1fr 1.1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-        "Vid1 . Img1"
-        "Vid2 . Img1"
-        "Img2 . Vid3"
-        "Img2 . Vid3"; 
-      }
+    background-color: #000;
+    width: auto;
+    height: auto;
+    border-radius: 1%;
+    margin: 0 1%; 
+    display: grid;
+    padding: 10px; 
+    border: 1px solid #000000; 
+    margin: 5px;
+  }
+
+  .container2 {
+    background-color: #000;
+    width: auto;
+    height: auto;
+    border-radius: 1%;
+    margin: 0 1%; 
+    display: grid;
+    padding: 10px; 
+    border: 1px solid #000000; 
+    margin: 5px;
+  }  
+  .container3 {
+    background-color: #000;
+    width: auto;
+    height: auto;
+    border-radius: 1%;
+    margin: 0 1%; 
+    display: grid;
+    padding: 10px; 
+    border: 1px solid #000000; 
+  }
+.image-container {
+    display: grid;
+    flex-direction: column;
+    align-items: center;    
+    width: auto;
+}
+
 .main-image-container {
     display: grid;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
-.image-container {
-    display: grid;
-    flex-direction: column;
-    align-items: center;    
-    width: auto;
-
-}
-.video-container {
-    display: grid; 
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
 
 .Img1 {
-    width: 100;
+    width: 1000;
     margin: 0 1%;
     grid-column: 2/3;
     grid-row: 1/3;
+    
+}
+
+.video-container {
+    width: 1000;
+    display: grid;
+    border-radius: 1%;
+    
+}
+
+.video-container2 {
+    width: 1000;
+    display: grid;
+    border-radius: 1%;
+}
+
+.video-container3 {
+    width: 1000;
+    display: grid;
     border-radius: 1%;
 }
 
@@ -49,15 +82,26 @@ body {
     border-radius: 1%;
 }
 
-.Vid1 {
+.Vid1, .Vid2, .Vid4, .Vid5 {
     width: 100%;
-    max-width: 100%;
+    margin: 1px;
+    border-radius: 1%;
 }
 
-.Vid3 {
-    width: 100%;
+.Vid6{
+    display: grid;
+    grid-column: 3;
+}
+
+.Img2 {
+    width: 1000;
     margin: 0 1%;
-    grid-column: 3/5;
+}
+
+.Vid3{
+    width: 100%;
+    margin: 1px;
+    border-radius: 1%;
 }
 
 

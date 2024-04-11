@@ -5,6 +5,14 @@ form {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
 label {
     display: block;
     margin-bottom: 10px;
